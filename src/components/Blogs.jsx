@@ -16,7 +16,7 @@ function Blogs() {
         const blogsData = await fetchAllBlogs();
         setBlogs(blogsData);
         
-        // Fetch user data for each userId in blogs
+        
         const userIds = [...new Set(blogsData.map(blog => blog.userId))];
         const usersData = await Promise.all(userIds.map(uid => fetchUserById(uid)));
         const usersMap = usersData.reduce((map, user) => {
