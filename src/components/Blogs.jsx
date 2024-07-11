@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { fetchAllBlogs, fetchUserById } from '../services/DataService';
 import LoadingSpinner from '../LoadingSpinner';
 import '../App.css';
 
 function Blogs() {
-  const { id } = useParams();
+  // const { id } = useParams();
   const [users, setUsers] = useState({});
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
